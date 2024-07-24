@@ -19,3 +19,7 @@
 >>> quit()
 
 Python, Python Debugger, Python Indent VSCode Extensions
+
+
+Ctrl + / - Toggle Line Comments 
+""" """ - Multi Line String for Comments 
