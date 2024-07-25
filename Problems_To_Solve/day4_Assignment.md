@@ -7,3 +7,5 @@ P3. Declare two number variables and find the remainder.
 P4. Use the input to add two numbers. 
 
 P5. Use the input to find the average. 
+
+P6. Create a 2 times table using the for loop.  
