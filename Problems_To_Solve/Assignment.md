@@ -16,8 +16,12 @@ P8. Take 5 input find the percentage and apply a condition if you passed or fail
 
 P9. Take an input string from a user and check if a word is part of that input. if then display word found or not found.
 
-P10. from a list of student print all the names starting with "S" - DONE
+P10. from a list of student print all the names starting with "S". - DONE
 
-P11. take an input from the user for the same input generate the table ( 2 * 1 = 2) using while loop - DONE
+P11. take an input from the user for the same input generate the table ( 2 * 1 = 2) using while loop. - DONE
 
-P12. print a list of prime numbers from 1-100 - DONE
+P12. print a list of prime numbers from 1-100. - DONE
+
+P13. Create a function to do adding/subtracting/dividing two numbers. 
+
+P14. Find the factorial of any number/input.
