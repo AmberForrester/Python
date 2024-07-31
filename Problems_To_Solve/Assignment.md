@@ -22,6 +22,6 @@ P11. take an input from the user for the same input generate the table ( 2 * 1 =
 
 P12. print a list of prime numbers from 1-100. - DONE
 
-P13. Create a function to do adding/subtracting/dividing two numbers. 
+P13. Create a function to do adding/subtracting/dividing two numbers. - DONE 
 
-P14. Find the factorial of any number/input.
+P14. Find the factorial of any number/input. - DONE
