@@ -25,3 +25,9 @@ P12. print a list of prime numbers from 1-100. - DONE
 P13. Create a function to do adding/subtracting/dividing two numbers. - DONE 
 
 P14. Find the factorial of any number/input. - DONE
+
+P15. Create a file and move the content from that file into another file on a different location. 
+
+P16. Append an existing file and verify the content in it. 
+
+P17. Delete all the files starting with a specific character or ends with a particular extension(txt, doc, etc.). 
