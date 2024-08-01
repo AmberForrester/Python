@@ -19,3 +19,12 @@ In addition you can specify if the file should be handled as binary or text mode
 't' - Text - Default value. Text mode. 
 
 'b' - Binary - Binary mode (e.g. images)
+
+Make sure the file exists or you will get an error.
+
+Always close your files, related to buffering changes made to a file may not show until you close a file. 
+
+The content of this file has been moved to the filehandling.txt file. 
+
+
+Content was moved from filetips.txt
