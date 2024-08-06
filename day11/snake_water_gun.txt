@@ -1,0 +1,11 @@
+The "Snake Water Gun" game is a classic hand game played by many people. 
+
+Here are the rules:
+
+Snake vs. Water: Snake drinks the water, so snake wins.
+
+Water vs. Gun: The gun will drown in water, so water wins.
+
+Gun vs. Snake: The gun kills the snake, so gun wins.
+
+If both players choose the same object, it's a draw.

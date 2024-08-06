@@ -32,4 +32,3 @@ P16. Append an existing file and verify the content in it. - DONE
 
 P17. Delete all the files starting with a specific character or ends with a particular extension(txt, doc, etc.). - DONE
 
-P18. 
