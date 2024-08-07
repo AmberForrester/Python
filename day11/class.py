@@ -1,3 +1,4 @@
+# Simple form class and objects:
 class Employee:
     role = 'Full Stack Developer'
     salary = '230000K per year'
