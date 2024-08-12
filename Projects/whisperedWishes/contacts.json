@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Alice",
+        "event_type": "BIRTHDAY",
+        "event_date": "2024-08-10",
+        "memory": "remember when you two got lost in the city on vacation and ended up having the best day finding that amazing cafe with the most beautiful view of the ocean?!"
+    },
+    {
+        "name": "Alice & Bob",
+        "event_type": "WEDDING ANNIVERSARY",
+        "event_date": "2024-09-15",
+        "memory": "remember when the 3 of you were in high school together, and you always knew one day they would get married?!"
+    },
+    {
+        "name": "Test Contact",
+        "event_type": "BIRTHDAY",
+        "event_date": "2024-08-10",
+        "memory": "remember the time you became a Full Stack Developer after having never done once piece of code before! Look at you now!"
+    },
+    {
+        "name": "Test Contact 2",
+        "event_type": "BIRTHDAY",
+        "event_date": "2024-08-11",
+        "memory": "remember the time the two of you took the canoe all the way from the dock to the beach and talked for hours?!"
+    },
+    {
+        "name": "Missing event date field",
+        "event_type": "BIRTHDAY",
+        "memory": "remember the time ..."
+    },
+    {
+        "name": "Invalid event date format",
+        "event_type": "BIRTHDAY",
+        "event_date": "08/10/2024",
+        "memory": "remember the time..."
+    },
+    {
+        "name": "Missing event type",
+        "event_type": " ",
+        "event_date": "2024-08-11",
+        "memory": "remember the time..."
+    }
+]
+
+
+
+    
