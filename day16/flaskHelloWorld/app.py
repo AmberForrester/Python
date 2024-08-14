@@ -3,11 +3,6 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route("/") # Default route 
-def hello_world():
-    return render_template('index.html')
-    # return "<p>Hello, World!</p>" 
-    
-@app.route("/index")
 def index():
     return render_template('index.html')
 
@@ -30,14 +25,6 @@ def privacy():
 @app.route("/contact")
 def contact():
     return render_template('contact.html')   
-
-""" @app.route("/blog") # Default route 
-def blog():
-    return "<p>This is my blog!</p>" 
-
-@app.route("/contact") # Default route 
-def contact():
-    return "<p>This is my Contact Page!</p>"  """
 
 if __name__ == '__main__':
     app.run(debug=True) # Development mode not production to show errors 
