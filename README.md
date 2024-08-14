@@ -23,3 +23,8 @@ Python, Python Debugger, Python Indent VSCode Extensions
 
 Ctrl + / - Toggle Line Comments 
 """ """ - Multi Line String for Comments 
+
+
+
+Open db files in SQLite Viewer using: 
+https://inloop.github.io/sqlite-viewer/
