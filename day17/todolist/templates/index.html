@@ -46,24 +46,24 @@
         </div>
       </nav>
 
-    <h1>My To Do List</h1>
+      <h1>To Do List</h1>
 
-    <div class='container'>
+      <div class='container'>
 
-        <form action='/'>
+        <form action='/' method='POST'>
             <div class="mb-3">
-              <label for="title" class="form-label">Title</label>
-              <input type="email" class="form-control" id="title" aria-describedby="emailHelp">
+              <label for="task" class="form-label">Task</label>
+              <input type="text" class="form-control" name='task' id="title" placeholder="Enter your task" required>
               
             </div>
             <div class="mb-3">
               <label for="desc" class="form-label">Description</label>
-              <input type="text" class="form-control" id="desc">
+              <input type="text" class="form-control" name='desc' id="desc" placeholder="Describe more detail" required>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
 
-    </div>
+      </div>
     <br />
     <br />
 
@@ -85,7 +85,7 @@
                     <th scope="row">{{loop.index}}</th>
                     <td>{{e.task}}</td>
                     <td>{{e.desc}}</td>
-                    <td>{{e.creation_date}}</td>
+                    <td>{{e.creation_date.strftime('%Y-%m-%d %H:%M')}}</td>
                   </tr>  
                 {% endfor %}
               

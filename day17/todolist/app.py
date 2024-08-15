@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy # ORM - Object Relational Mapper
 from datetime import datetime
 
@@ -15,21 +15,36 @@ class Todolist(db.Model):
     taskid = db.Column(db.Integer, primary_key = True) # Only one primary key. 
     task = db.Column(db.String(250), nullable = True)
     desc = db.Column(db.String(500), nullable = True)
-    creation_date = db.Column(db.DateTime, default=datetime.now())
+    creation_date = db.Column(db.DateTime, default=datetime.now().replace(second=0, microsecond=0))
     
     def __repr__(self) -> str:
         return f'{self.taskid} - {self.task} - {self.desc}'
 
 
 
-
-@app.route("/") # Default route 
+@app.route("/", methods=['GET', 'POST']) # Default route 
 def index():
-    todo = Todolist(task='reading a book', desc='Dotcom Secrets')
-    db.session.add(todo)
-    db.session.commit()
-    myalltodolist = Todolist.query.all() # Connect to variable to throw back 
+    
+    # Only process the form data if it is a POST request:
+    if request.method == 'POST':
+        mytask = request.form['task']
+        mydesc = request.form['desc']
+        # print('Checking the post method'), checking the requests. 
+        # print(request.form['task'])
+        # print(request.form['desc'])
+    
+    # Only add the todo if task and description are not empty:
+        if mytask and mydesc:
+            todo = Todolist(task=mytask, desc=mydesc)
+            db.session.add(todo)
+            db.session.commit()
+            
+    # Query all to-do items to display them:
+    myalltodolist = Todolist.query.all() # Connect to variable to throw back
+     
     return render_template('index.html', myalltodolist=myalltodolist)
+
+
 
 @app.route("/getlist") # Default route 
 def getlists():
