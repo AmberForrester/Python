@@ -1,0 +1,25 @@
+{% extends 'sharedhtml.html' %}
+
+{% block body %}
+
+<h1>Update To Do List</h1>
+      <br />
+
+      <div class='container'>
+
+        <form action='/update/{{mytodo.taskid}}' method='POST'>
+            <div class="mb-3">
+              <label for="task" class="form-label">Task</label>
+              <input type="text" class="form-control" name='task' value='{{mytodo.task}}'id="title" placeholder="Enter your task" required>
+              
+            </div>
+            <div class="mb-3">
+              <label for="desc" class="form-label">Description</label>
+              <input type="text" class="form-control" name='desc' value='{{mytodo.desc}}'  id="desc" placeholder="Describe more detail" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+
+      </div>
+    
+{% endblock body %}

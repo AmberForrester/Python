@@ -1,0 +1,56 @@
+{% extends 'sharedhtml.html' %}
+
+{% block body %}
+
+            <h1 style='padding-left: 30px;'>Search Results for '{{query}}'</h1>
+            <br />
+
+    <div class='container'>
+
+            {% if SearchResults|length == 0 %}
+            <div class='container'>
+                <div class="alert alert-warning" role="alert">
+                    Sorry, no tasks were found in your to do list that match your search. 
+                </div>
+            </div>
+
+        {% else %}
+
+        <div class='container'>
+
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">TaskId</th>
+                    <th scope="col">Task</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+      
+                    {% for e in SearchResults %}
+
+                      <tr>
+                        <th scope="row">{{loop.index}}</th>
+                        <td>{{e.task}}</td>
+                        <td>{{e.desc}}</td>
+                        <td>{{e.creation_date.strftime('%Y-%m-%d %H:%M')}}</td>
+                        <td class="text-center">
+                          <div class="btn-group" role="group" aria-label="Action buttons">
+                              <a href='/update/{{e.taskid}}' type="button" class="btn btn-outline-primary btn-sm">Update</a>
+                              <a href='/delete/{{e.taskid}}' type="button" class="btn btn-outline-danger btn-sm">Delete</a>
+                          </div>
+                      </td>
+                      </tr>  
+
+                    {% endfor %}
+                  
+                </tbody>
+              </table>
+              
+    </div>
+
+{% endif %}
+        
+{% endblock body %}
