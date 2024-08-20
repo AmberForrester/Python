@@ -12,8 +12,15 @@ def index():
 @app.route("/weather")
 def get_weather():
     city = request.args.get("city")
+    
+    # if not bool(city.strip()):
+    #     city = "toronto" # If user does not define a city, the default city given will be Toronto. 
+        
+    weather_data = get_my_weather(city)    
+        
+    # if not weather_data["cod"] == 200:
+    #     return render_template('error_page.html')
 
-    weather_data = get_my_weather(city)
     return render_template(
         "weather.html",
         title=weather_data["name"],
