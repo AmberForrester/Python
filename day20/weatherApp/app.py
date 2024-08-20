@@ -11,7 +11,6 @@ def index():
 
 @app.route("/weather")
 def get_weather():
-    # city = "toronto"
     city = request.args.get("city")
 
     weather_data = get_my_weather(city)
@@ -25,7 +24,5 @@ def get_weather():
     )
 
 
-
 if __name__ == '__main__':
-    
     app.run(debug=True) # Development mode not production to show errors. 
