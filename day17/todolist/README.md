@@ -1,6 +1,6 @@
 <a id="readme-top"></a>
 
-<h1 align='center'>To Do List :memo::pencil:</h1> 
+<h1 align='center'>To Do List :memo:</h1> 
 
 <div align='center'>
 
