@@ -23,7 +23,7 @@ If applicable, add screenshots to help explain your problem.
  - OS: [e.g. iOS, Windows, Arch Linux]
  - Device: [e.g. iPhone6]
  - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+ - Version [e.g. 23]
  - Other details that you think may have an affect.
 
 ### Additional context
