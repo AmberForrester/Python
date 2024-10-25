@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
-
-    <link href="{{url_for('static', filename='styles/styles.css') }}" rel="stylesheet" />
-    
+    <link href="{{ url_for('static', filename='styles/styles.css') }}" rel="stylesheet" />
 </head>
 <body>
-    
     <h1>Weather App</h1>
-    <form action='/weather'>
-
-        <input type='text' name='city' id='city' placeholder='Enter a City'/>
-        <button type='submit'>Submit</button>
+    {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+    {% endif %}
+    <form action="/weather" method="get">
+        <input type="text" name="city" id="city" placeholder="Enter a City" value="{{ city or '' }}" />
+        <button type="submit">Submit</button>
+        <button id="locationButton" type="button" class="location-btn">
+            Use Current Location
+        </button>
     </form>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 </body>
 </html>

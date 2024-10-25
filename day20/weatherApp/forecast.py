@@ -1,19 +1,28 @@
 from dotenv import load_dotenv
-from pprint import pprint
 import requests
 import os
 
 load_dotenv()
 
-
 def get_my_weather(city):
-    request_url = f"https://api.openweathermap.org/data/2.5/weather?appid={os.getenv("API_KEY")}&q={city}&units=metric"
-    weather_data = requests.get(request_url).json()
+    api_key = os.getenv("API_KEY")
+    request_url = f"https://api.openweathermap.org/data/2.5/weather?appid={api_key}&q={city}&units=metric"
+    response = requests.get(request_url)
+    weather_data = response.json()
     return weather_data
 
+def get_weather_by_coordinates(lat, lon):
+    api_key = os.getenv("API_KEY")
+    request_url = f"https://api.openweathermap.org/data/2.5/weather?appid={api_key}&lat={lat}&lon={lon}&units=metric"
+    response = requests.get(request_url)
+    weather_data = response.json()
+    return weather_data
 
 if __name__ == "__main__":
-    print("Get Weather")
-    # print(os.getenv("API_KEY"))
-    my_weather_info = get_my_weather("new york")
-    print(my_weather_info)
+    print("Weather by City")
+    city_weather = get_my_weather("new york")
+    print(city_weather)
+
+    print("\nWeather by Coordinates")
+    coord_weather = get_weather_by_coordinates(40.7128, -74.0060)
+    print(coord_weather)

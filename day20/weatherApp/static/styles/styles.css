@@ -21,3 +21,9 @@ input, button {
     padding: 1rem;
     border-radius: 10px;
 }
+
+.location-btn {
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 10px;
+}
