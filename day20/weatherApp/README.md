@@ -74,7 +74,7 @@ Before running the application, make sure you have the following installed:
   cd Python-Code/day20/weatherApp
   ```
 
-2. **Set up a Virtual Environment:**
+3. **Set up a Virtual Environment:**
 
 Create and activate a virtual environment to isolate your dependencies.
 
@@ -90,7 +90,7 @@ python3 -m venv env
 source env/bin/activate
 ```
 
-3. **Install Required Dependencies:** 
+4. **Install Required Dependencies:** 
 
 - For **Windows users:** 
 
@@ -99,7 +99,7 @@ Install the required dependencies from `requirements.txt`.
   pip install -r requirements.txt
   ```
 
-4. **Set Up Environment Variables**
+5. **Set Up Environment Variables**
 
 Create a `.env` file in the root of your project with the following content:
 ```bash
